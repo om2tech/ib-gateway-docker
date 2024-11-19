@@ -33,8 +33,7 @@ jobs:
         uses: docker/metadata-action@v5
         with:
           images: |
-            ghcr.io/gnzsnz/ib-gateway
-            gnzsnz/ib-gateway
+            om2docker/ib-gateway
           flavor: |
             latest=false
           tags: |
@@ -49,7 +48,6 @@ jobs:
           load: true
           context: ./${{ env.CHANNEL }}
           cache-from: type=gha
-          cache-to: type=gha,mode=max
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
 
@@ -61,8 +59,7 @@ jobs:
         uses: docker/metadata-action@v5
         with:
           images: |
-            ghcr.io/gnzsnz/tws-rdesktop
-            gnzsnz/tws-rdesktop
+            om2docker/tws-rdesktop
           flavor: |
             latest=false
           tags: |
