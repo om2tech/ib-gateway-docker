@@ -19,7 +19,8 @@ RUN apt-get update -y && \
   DEBIAN_FRONTEND=noninteractive apt-get install --no-install-recommends --yes \
   curl \
   ca-certificates \
-  unzip && \
+  unzip \
+  telnet && \
   apt-get clean && \
   rm -rf /var/lib/apt/lists/* && \
 # Install IB Gateway
